@@ -1,0 +1,105 @@
+body {
+  max-width: 100%;
+  padding: 1em;
+  font-family: Ranga, Arial, sans-serif;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+div, section, main, aside, header, footer {
+/*  border: 1px solid lightgray;
+  padding: .5em;
+  margin-bottom: 1em;
+  */
+}
+
+img {
+  height: 25%;
+  width: 25%;
+}
+
+
+header {
+  }
+
+.header-logo {
+  position: absolute;
+  top: 0px;
+  left: 10px;
+  height: 100px;
+  width: 100px;
+  grid-area: logo;
+}
+
+.hero-img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-image: url("images/cabin-creek-landing-bed-and-breakfast-marion-mt.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  opacity: .8;
+  height: 500px;
+  width: 100%;
+  padding: auto;
+}
+
+nav {
+  position: relative;
+  top: 100px;
+  right: 0px;
+  max-width: 100%;
+  background-color: lightgray;
+  opacity: .4;
+  padding-left: 7em;
+}
+
+ul {
+  postion: absolute;
+  top: 100px;
+  right: 100px;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.gradient {
+  position: relative;
+  top: 247px;
+  background: linear-gradient(#61574B, #FFF);
+  width: 100%;
+  height: 5px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0px;
+}
+
+h1{
+
+}
+
+h2 {
+
+}
+h3 {
+
+}
+h4 {
+
+}
+h5 {
+
+}
+h6 {
+
+}
+
+p {
+
+}
+
+main {
+
+}
