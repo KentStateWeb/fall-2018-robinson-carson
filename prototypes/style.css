@@ -19,6 +19,7 @@ img {
 
 
 header {
+
   }
 
   nav {
@@ -50,7 +51,6 @@ header {
   background-position: center;
   height: 100%;
   width: 100%;
-  padding: auto;
 }
 
 .nav-bar {
@@ -67,7 +67,7 @@ header {
   right: 10px;
 }
 
-a {
+a.icon {
   color: white;
 }
 
@@ -82,13 +82,147 @@ a {
   opacity: .8;
 }
 
+main {
+  color: black;
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  background: linear-gradient(45deg, rgba(191, 195, 199, .2), white);
+  min-width: 100%;
+  min-height: 500px;
+  text-align: center;
+  padding-top: 5em;
+}
+
+.main-heading {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  font-family: cursive;
+  padding-left: 4em;
+}
+
+.img1 {
+  position: absolute;
+  top: 60px;
+  right: 80px;
+  width: 550px;
+  height: 300px;
+}
+
+.img2 {
+  position: absolute;
+  top: 250px;
+  right: 350px;
+  width: 350px;
+  height: 250px;
+}
+
+.img2, .img3 {
+  border: .5em solid white;
+}
+
+.img3 {
+  position: absolute;
+  top: 300px;
+  right: 200px;
+  width: 175px;
+  height: 175px;
+}
+
+.room-wrapper {
+  position: absolute;
+  top: 1220px;
+  left: 0px;
+  background-color: rgba(112, 124, 139, .5);
+  min-height: 500px;
+  min-width: 100%;
+}
+
+.room-img {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  min-width: 600px;
+  min-height: 350px;
+  border: 1em solid white;
+}
+
+.overlapping_sqr {
+  min-width: 350px;
+  min-height: 450px;
+  position: absolute;
+  top: 250px;
+  right: 250px;
+  background-color: rgba(43, 46, 49, .8);
+}
+
+.empty-box {
+  min-width: 350px;
+  min-height: 200px;
+  border: .25em solid rgba(210, 180, 140, 1);
+  position: absolute;
+  top: 150px;
+  right: 140px;
+  background-color: transparent;
+}
+
+.price {
+    position: absolute;
+    bottom: 0px;
+    left: 10px;
+    color: rgba(210, 180, 140, 1);
+    font-size: 3em;
+}
+
 ul {
   list-style: none;
 }
 
-footer {
-
+.testimonials {
+  position: absolute;
+  top: 2000px;
+  left: 0px;
+  min-width: 100%;
+  min-height: 500px;
+  background-color: rgba(191, 195, 199, .2);
+  text-align: center;
 }
+
+.testimonials-img {
+  background-image: url("https://i.postimg.cc/Cxft0Kdv/elon-musk.jpg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 10em; /* NOT WORKING */
+  min-width: 100px;
+  min-height: 200px;
+}
+
+footer {
+  text-align: center;
+  position: absolute;
+  top: 2500px;
+  left: 100px;
+  color: black;
+}
+
+.address {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.social-media-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.social-media {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  color: black;
+}
+
 
 h1{
 
