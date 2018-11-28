@@ -1,9 +1,14 @@
+/* ------------ Global -------------- */
 body {
   max-width: 100%;
   padding: 1em;
-  font-family: Arial, sans-serif;
+  font-family: Playfair Display, Arial, sans-serif;
   display: grid;
   grid-template-columns: 1fr;
+}
+
+ul {
+  list-style: none;
 }
 /*
 div, section, main, aside, header, footer {
@@ -26,6 +31,10 @@ header {
 
   }
 
+/* ------------- NOTE: Remember to create a "Favicon" Icon ----------------- */
+/* Pattern Library */
+
+/* -------------- Header --------------- */
 .header-logo {
   background-image: url("https://rwdkent.com/class/groups/assets/group6/buckeye.svg");
   background-repeat: no-repeat;
@@ -75,12 +84,18 @@ a.icon {
   opacity: .6;
 }
 
+div.arrow {
+  color: white;
+}
+
 .arrow {
 	position: absolute;
   bottom: 5%;
   left: 50%;
   opacity: .8;
 }
+
+/* -------------- Main Section --------------- */
 
 main {
   color: black;
@@ -129,6 +144,7 @@ main {
   height: 175px;
 }
 
+/* -------------- Section (Room) --------------- */
 .room-wrapper {
   position: absolute;
   top: 1220px;
@@ -174,9 +190,7 @@ main {
     font-size: 3em;
 }
 
-ul {
-  list-style: none;
-}
+/* -------------- Section (Testimonials) --------------- */
 
 .testimonials {
   position: absolute;
@@ -198,6 +212,8 @@ ul {
   min-height: 200px;
 }
 
+
+/* -------------- Section (Footer) --------------- */
 footer {
   text-align: center;
   position: absolute;
