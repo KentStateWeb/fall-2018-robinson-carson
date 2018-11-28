@@ -31,7 +31,7 @@ header {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 60% 60%;
-  fill: red; /*-- NOT WORKING!!! */
+  fill: white; /*-- NOT WORKING!!! */
   width: 50%;
   height: 50%;
   position: relative;
