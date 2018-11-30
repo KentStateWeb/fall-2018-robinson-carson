@@ -30,6 +30,10 @@ div, section, main, aside, header, footer {
 }
 */
 
+h1 {
+    list-style: none;
+    font-size: 20px;
+}
 
 header {
     background-color: white;
