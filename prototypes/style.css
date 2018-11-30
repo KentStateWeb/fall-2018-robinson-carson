@@ -1,9 +1,8 @@
 /* NOTE:
-  - Date: 11/30/2018   TIME: 9:45am
+  - Date: 11/30/2018   TIME: 1:09pm
 
-  - Fixed the svg logo image code.
-  - Removed Border around logo image.
-  - Attached the arrow button, now it links to the about section of the page.
+  - Adjusted the testimonials section.
+
 */
 
 
@@ -121,7 +120,7 @@ main {
   left: 0px;
   background: linear-gradient(rgba(255, 187, 218, .2), rgba(254, 89, 164, .3));
   min-width: 100%;
-  min-height: 700px;
+  min-height: 100%;
   text-align: center;
   padding-top: 5em;
   padding-bottom: 5em;
@@ -216,7 +215,7 @@ main {
 
 .testimonials {
   position: absolute;
-  top: 2000px;
+  top: 1500px;
   left: 0px;
   min-width: 100%;
   min-height: 500px;
@@ -232,6 +231,36 @@ main {
   border-radius: 10em; /* NOT WORKING */
   min-width: 100px;
   min-height: 200px;
+}
+
+/* -------------- Page (Contacts) --------------- */
+
+body.bcontacts {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: pink;
+}
+
+/* ====== Header Sec (On Contacts Page) ======= */
+header.header-wrapper {
+  background-image: url("images/animals-avian-backlit-1126384.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  min-width: 100%;
+  min-height: 300px;
+}
+
+header.header-content {
+
+}
+
+main.contacts {
+
 }
 
 
