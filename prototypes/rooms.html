@@ -5,18 +5,19 @@
 
 
 img {
-  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
-/*pager dot outside*/
+
 .carousel-indicators {
   position: absolute;
   bottom: -50px;
 }
-/*pager dot;*/
+
 .carousel-indicators, li {
   border-color: black;
 }
-/*active pager dot;*/
+
 .carousel-indicators, .active {
   background-color: black;
 }
