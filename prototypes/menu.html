@@ -66,7 +66,7 @@
         background-repeat: no-repeat;
         background-size: cover;
        position:relative;
-      transform: translateX(100%);
+    
       transition: 0.6s all ease-in-out;
     }
 
@@ -77,7 +77,7 @@
         margin: 0;
         color: #7E7E7E;
         font-weight: 700;
-        transform: translateY(25%);
+
         opacity: 0;
         /* visibility: hidden; */
         transition: 0.4s all ease-in-out;
@@ -90,12 +90,23 @@
         letter-spacing: 3px;
         font-weight: 700;
         color: #2C2C2C;
-    
+
         opacity: 0;
         /* visibility: hidden; */
         transition: 0.6s all ease-in-out;
     }
 
+    .carousel-item__description {
+
+        opacity: 0;
+      /*  visibility: hidden; */
+        transition: 0.6s all ease-in-out;
+        margin-top: 35px;
+        font-size: 13px;
+        color: #7e7e7e;
+        line-height: 22px;
+        margin-bottom: 35px;
+    }
 
     .carousel-item--1 .carousel-item__image{
       background-image: url('https://images.pexels.com/photos/991012/pexels-photo-991012.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
@@ -120,6 +131,26 @@
 
 
 
+
+    .carousel-item__container{
+
+    }
+
+    .carousel-item__btn {
+        width: 35%;
+        color: #2C2C2C;
+        letter-spacing: 3px;
+        font-size: 11px;
+        text-transform: uppercase;
+        margin: 0;
+        width: 35%;
+        font-weight: 700;
+      text-decoration: none;
+
+        opacity: 0;
+      /* visibility: hidden; */
+        transition: 0.6s all ease-in-out;
+    }
     </style>
   <script>
     $(function(){
