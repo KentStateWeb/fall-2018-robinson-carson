@@ -1,3 +1,18 @@
+/* NOTE:
+  - Date: 11/30/2018   TIME: 9:45am
+
+  - Fixed the svg logo image code.
+  - Removed Border around logo image.
+  - Attached the arrow button, now it links to the about section of the page.
+
+
+
+*/
+
+
+
+
+
 /* ------------ Global -------------- */
 body {
   max-width: 100%;
@@ -17,46 +32,41 @@ div, section, main, aside, header, footer {
   margin-bottom: 1em;
 }
 */
-img {
-  height: 25%;
-  width: 25%;
-}
 
 
 header {
     background-color: white;
   }
 
-  nav {
-
-  }
-
 /* ------------- NOTE: Remember to create a "Favicon" Icon ----------------- */
 /* Pattern Library */
 
+
 /* -------------- Header --------------- */
 .header-logo {
-  background-image: url("https://rwdkent.com/class/groups/assets/group6/buckeye.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 60% 60%;
-  fill: white; /*-- NOT WORKING!!! */
-  width: 40%;
-  height: 40%;
+  fill: white !important;
+  stroke: rgba(0, 0, 0, .34);
+  width: 30%;
+  height: 30%;
   position: relative;
-  top: 150px;
-  left: 31%;
-  border: .2em solid white;
+  top: 175px;
+  left: 33%;
+  border: .2em solid rgba(255, 255, 255, .65);
+  padding: 2em;
 }
 
 .motto {
   color: white;
-  font-size: 5em;
+  font-size: 3em;
   font-style: italic;
   font-weight: 100;
   position: absolute;
   top: 70%;
-  left: 25%;
+  left: 35%;
+  text-shadow: -1px -1px 0 rgba(0, 0, 0, .45),
+		1px -1px 0 rgba(0, 0, 0, .45),
+		-1px 1px 0 rgba(0, 0, 0, .45),
+		1px 1px 0 rgba(0, 0, 0, .45);
 }
 
 .hero-img {
@@ -70,7 +80,6 @@ header {
   background-position: center;
   height: 100%;
   width: 100%;
-  opacity: .75;
 }
 
 .nav-bar {
