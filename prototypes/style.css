@@ -127,6 +127,7 @@ main {
   min-height: 700px;
   text-align: center;
   padding-top: 5em;
+  padding-bottom: 5em;
 }
 
 .main-heading {
@@ -162,6 +163,10 @@ main {
   right: 200px;
   width: 175px;
   height: 175px;
+}
+
+.content-left {
+
 }
 
 /* -------------- Section (Room) --------------- */
