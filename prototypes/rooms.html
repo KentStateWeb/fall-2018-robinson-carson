@@ -1,0 +1,91 @@
+<html>
+<head>
+<style>
+$primary: #B78140
+
+img
+  width: 100%
+//pager dot outside
+.carousel-indicators
+  position: absolute
+  bottom: -50px
+//pager dot
+.carousel-indicators li
+  border-color: $primary
+//active pager dot
+.carousel-indicators .active
+  background-color: $primary
+  
+</style>
+</head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<div id="image-carousel" class="carousel slide" data-ride="carousel">
+
+  <!-- pager dots -->
+  <ol class="carousel-indicators">
+    <li data-target="#image-carousel" data-slide-to="0" class="active"></li>
+    <li data-target="#image-carousel" data-slide-to="1"></li>
+    <li data-target="#image-carousel" data-slide-to="2"></li>
+    <li data-target="#image-carousel" data-slide-to="3"></li>
+    <li data-target="#image-carousel" data-slide-to="4"></li>
+    <li data-target="#image-carousel" data-slide-to="5"></li>
+    <li data-target="#image-carousel" data-slide-to="6"></li>
+  </ol>
+
+  <!-- image slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="https://source.unsplash.com/random/" alt="">
+      <div class="carousel-caption">
+        Consectetur
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="https://source.unsplash.com/random/" alt="">
+      <div class="carousel-caption">
+        Fringilla Dolor
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="https://source.unsplash.com/random/" alt="">
+      <div class="carousel-caption">
+        Consectetur Amet Egestas
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="https://source.unsplash.com/random/" alt="">
+      <div class="carousel-caption">
+        Sem Sollicitudin Etiam Malesuada
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="https://source.unsplash.com/random/" alt="">
+      <div class="carousel-caption">
+        CVenenatis Malesuada Egestas Mattis Dolor
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="https://source.unsplash.com/random/" alt="">
+      <div class="carousel-caption">
+        Egestas Purus Dapibus Consectetur Amet Egestas
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="https://source.unsplash.com/random/" alt="">
+      <div class="carousel-caption">
+        Sem Vulputate Malesuada Nullam Consectetur Amet Egestas
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</html>
