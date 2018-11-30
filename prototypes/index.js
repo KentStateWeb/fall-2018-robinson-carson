@@ -16,3 +16,4 @@ $(document).ready(function() {
       /* the speed of the will be 1000ms = 1s */
     }, 1000 );
   });
+});
