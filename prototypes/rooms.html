@@ -1,0 +1,47 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<html>
+<head>
+<style>
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 100px 200px 100px;
+
+  grid-template-areas:
+        "item1 item2 item3 item4"
+        "main main2 . side"
+        "one footer footer footer";
+}
+
+img {
+  min-width:  100%;
+  min-height:  50%;
+}
+
+</style>
+</head>
+
+<div class="one">
+  <h1> Master Bedroom </h1>
+
+<div class="container">
+    <div class="item1">
+      <img src="https://source.unsplash.com/random/" alt="">
+    </div>
+
+    <div class="item2">
+      <img src="https://source.unsplash.com/random/" alt="">
+    </div>
+
+    <div class="item3">
+      <img src="https://source.unsplash.com/random/" alt="">
+    </div>
+
+    <div class="item4">
+      <img src="https://source.unsplash.com/random/" alt="">
+    </div>
+  </div>
+
+
+</html>
