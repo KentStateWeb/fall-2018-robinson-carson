@@ -1,7 +1,7 @@
 /* NOTE:
-  - Date: 11/30/2018   TIME: 1:09pm
+  - Date: 12/3/2018   TIME: 2:59pm
 
-  - Adjusted the testimonials section.
+  - Fixed the Nav Bar - Using Flexbox.
 
 */
 
@@ -14,8 +14,8 @@ body {
   max-width: 100%;
   padding: 1em;
   font-family: Playfair Display, Arial, sans-serif;
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
 }
 
 ul {
@@ -26,6 +26,12 @@ header {
     background-color: white;
   }
 
+main {
+  margin: 0;
+}
+
+
+
 /* ------------- NOTE: Remember to create a "Favicon" Icon ----------------- */
 /* Pattern Library */
 
@@ -33,20 +39,19 @@ header {
 /* -------------- Header --------------- */
 .header-logo {
   fill: white !important;
-  stroke: rgba(0, 0, 0, .34);
+  stroke: rgba(0, 0, 0, .08);
   width: 30%;
   height: 30%;
   position: relative;
   top: 175px;
   left: 33%;
-  border: .2em solid rgba(255, 255, 255, .65);
+  border: .2em solid rgba(255, 255, 255, 1);
   padding: 2em;
 }
 
 .motto {
   color: white;
   font-size: 3em;
-  font-style: italic;
   font-weight: 100;
   position: absolute;
   top: 70%;
@@ -71,17 +76,19 @@ header {
 }
 
 .nav-bar {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: auto;
-  grid-gap: auto;
-  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
   text-align: center;
+  flex: auto;
   width: 50%;
   height: 4%;
   position: absolute;
   top: 25px;
   right: 10px;
+  margin: 0;
+  padding-right: 50px;
 }
 
 a.icon {
@@ -203,11 +210,13 @@ main.main-heading {
 /* -------------- Section (Testimonials) --------------- */
 
 .testimonials {
+  display: flex;
+  flex-direction: column;
   position: absolute;
-  top: 1500px;
+  top: 1440px;
   left: 0px;
   min-width: 100%;
-  min-height: 500px;
+  min-height: 400px;
   background-color: rgba(191, 195, 199, .2);
   text-align: center;
 }
@@ -330,7 +339,7 @@ input.fullName, .email {
   align-content: left;
   width: 50%;
   margin-left: 1em;
-  padding-left: .2em; 
+  padding-left: .2em;
 }
 
 
