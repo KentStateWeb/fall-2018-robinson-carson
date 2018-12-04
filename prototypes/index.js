@@ -17,3 +17,11 @@ $(document).ready(function() {
     }, 1000 );
   });
 });
+
+
+$(document).ready(function(){
+    $(".navbutton").click(function(){
+        $("#navitems").fadeToggle();
+
+    });
+});

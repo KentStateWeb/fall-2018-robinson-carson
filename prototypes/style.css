@@ -53,6 +53,7 @@ main {
   color: white;
   font-size: 3em;
   font-weight: 100;
+  font-family: 'Pacifico', cursive;
   position: absolute;
   top: 70%;
   left: 35%;
@@ -66,8 +67,8 @@ main {
   position: absolute;
   top: 0px;
   left: 0px;
-  background-image: url("images/cabin-creek-landing-bed-and-breakfast-marion-mt.jpg");
-  background-size: 100%;
+  background-image: url("images/cabin-creek-landing-bed-and-breakfast-marion-mt.jpg"); */
+  background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
@@ -75,38 +76,16 @@ main {
   width: 100%;
 }
 
-.nav-bar {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: baseline;
-  text-align: center;
-  flex: auto;
-  width: 50%;
-  height: 4%;
-  position: absolute;
-  top: 25px;
-  right: 10px;
-  margin: 0;
-  padding-right: 50px;
-}
-
-a.icon {
-  color: white;
-}
-
-.icon {
-  opacity: 1;
-}
-
 div.arrow {
-  color: white;
-}
-
-.arrow {
-	position: absolute;
+  position: absolute;
   bottom: 5%;
   left: 50%;
+  color: white;
+  opacity: 0.5;
+  transition: opacity 0.5s ease-in;
+}
+
+div.arrow:hover {
   opacity: 1;
 }
 
@@ -370,27 +349,287 @@ footer {
   color: black;
 }
 
+/* ====================================================== */
+/* -------------- Rooms () --------------- */
 
-h1{
-
+body.body-container {
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
 
-h2 {
-
-}
-h3 {
-
-}
-h4 {
-
-}
-h5 {
-
-}
-h6 {
-
+div.room1-wrapper {
+  width: 100%;
+  height: 400px;
+  display: block;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  top: 0%;
+  left: 0%;
 }
 
-p {
+.item1, .item2, .item3, .item4 {
+  width: 65%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
+.rooms-header {
+  background-image: url("images/michael-shannon-474807-unsplash.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: -26px;
+  left: 0px;
+}
+
+.item1 {
+  background-image: url("images/bed-and-breakfast-room-with-a-view-aj4vaekj.jpg");
+  position: relative;
+  top: 20%;
+  left: 5%;
+  height: 500px;
+}
+
+.item1-content {
+  background-color: white;
+  padding: 1em 1.5em 1em 1.5em;
+  line-height: 1.75em;
+  margin: 0;
+  z-index: 1;
+  position: relative;
+  top: -55%;
+  left: 55%;
+  width: 35%;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+
+.item2 {
+  background-image: url("images/evergreen-header-23.jpg");
+  position: relative;
+  top: 20%;
+  left: 31%;
+  height: 500px;
+}
+
+.room2-wrapper {
+  width: 100%;
+  height: 400px;
+  display: block;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  top: -40%;
+  left: 0%;
+}
+
+.item2-content {
+background-color: white;
+padding: 1em 1.5em 1em 1.5em;
+line-height: 1.75em;
+margin: 0;
+z-index: 1;
+position: relative;
+top: -125%;
+left: 5%;
+width: 35%;
+box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.item3 {
+  background-image: url("images/fireplace.jpg");
+  position: relative;
+  top: 20%;
+  left: 5%;
+  height: 500px;
+}
+
+.room3-wrapper {
+  width: 100%;
+  height: 400px;
+  display: block;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  top: 0%;
+  left: 0%;
+}
+
+.item3-content {
+  background-color: white;
+  padding: 1em 1.5em 1em 1.5em;
+  line-height: 1.75em;
+  margin: 0;
+  z-index: 1;
+  position: relative;
+  top: -55%;
+  left: 55%;
+  width: 35%;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.item4 {
+  background-image: url("images/Sissinghurst-Bed-and-Breakfast-7.jpg");
+}
+
+
+body
+{
+  margin: 0;
+  padding: 0;
+  /* make it look decent enough */
+  background: clear; /* clear background */
+  font-family: "Avenir Next", "Avenir", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+a:hover
+{
+  color: tomato;
+}
+
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 50px;
+
+  z-index: 1; /* Position in front */
+}
+
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+
+  cursor: pointer;
+
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+
+  background: white;
+  border-radius: 3px;
+
+  z-index: 1;
+
+  transform-origin: 4px 0px;
+
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/*
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: white;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+  position: absolute;
+  width: 200px;
+  height: 489px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+
+  background: rgba(47,79,79, .5);
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+
+#social {
+  position: absolute;
+  top: 85%;
+  left: 0px;
+  display: flex;
+  flex-direction: row;
+}
+
+.spacing {
+  margin: 0 0 0 1em;
 }

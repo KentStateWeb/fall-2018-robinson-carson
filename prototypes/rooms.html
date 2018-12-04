@@ -1,47 +1,94 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <html>
 <head>
-<style>
-
-.container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 100px 200px 100px;
-
-  grid-template-areas:
-        "item1 item2 item3 item4"
-        "main main2 . side"
-        "one footer footer footer";
-}
-
-img {
-  min-width:  100%;
-  min-height:  50%;
-}
-
-</style>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 </head>
+<body class="body-container">
+  <nav role="navigation">
+    <div id="menuToggle">
+      <!--
+      A fake / hidden checkbox is used as click reciever,
+      so you can use the :checked selector on it.
+      -->
+      <input type="checkbox" />
+      <!--
+      Some spans to act as a hamburger.
 
-<div class="one">
-  <h1> Master Bedroom </h1>
-
-<div class="container">
-    <div class="item1">
-      <img src="https://source.unsplash.com/random/" alt="">
+      They are acting like a real hamburger,
+      not that McDonalds stuff.
+      -->
+      <span></span>
+      <span></span>
+      <span></span>
+      <!--
+      Too bad the menu has to be inside of the button
+      but hey, it's pure CSS magic.
+      -->
+      <ul id="menu">
+        <a href="index.html"><li>Home</li></a>
+        <a href="rooms.html"><li>Rooms</li></a>
+        <a href="contacts.html"><li>Contact</li></a>
+        <ul id="social">
+          <a href="#"><div class="spacing"><i class="fab fa-facebook fa-2x"></i></div></a>
+          <a href="#"><div class="spacing"><i class="fab fa-instagram fa-2x"></i></div></a>
+          <a href="#"><div class="spacing"><i class="fab fa-twitter-square fa-2x"></i></div></a>
+          <a href="#"><div class="spacing"><i class="fab fa-pinterest-square fa-2x"></i></div></a>
+          <a href="#"><div class="spacing"><i class="fab fa-youtube fa-2x"></i></div></a>
+        </ul>
+      </ul>
     </div>
-
-    <div class="item2">
-      <img src="https://source.unsplash.com/random/" alt="">
-    </div>
-
-    <div class="item3">
-      <img src="https://source.unsplash.com/random/" alt="">
-    </div>
-
-    <div class="item4">
-      <img src="https://source.unsplash.com/random/" alt="">
-    </div>
+  </nav>
+  <header class="rooms-header"></header>
+<main>
+<div class="room1-wrapper">
+    <div class="item1"></div>
+    <div class="item1-content">
+<h2>Master Suite</h2>
+    <p>Majestically appointed with only the finest furnishings and décor, this Jacuzzi suite at our elegant bed and breakfast is ideal for romantic getaways in Ohio.  Overlooking the front garden and formal fountain with a view of the quaint town of Millersburg.</p>
+    <ul>
+      <h3>Amenities</h3>
+<li>Queen-size, four-poster, pillow-top bed dressed in triple-sheeted superior quality cotton sheets and deluxe down pillows and comforter.</li>
+<li>Lush, cozy spa robes and oversized luxurious bath sheets, a perfect accompaniment to your relaxing spa bath.</li>
+<li>Two gas fireplaces</li>
+<li>Walk-in closet</li>
+<li>32" HD flat-screen television</li>
+</ul>
+<p>Romantic chandelier-lit private bath with gas fireplace, two-person Jacuzzi tub, his & her porcelain dual saucer sinks mounted on a handsome acacia wood dressing table imported from India, exhilarating multi-spray shower, and custom-designed tile throughout.</p>
+</div>
+<div class="room2-wrapper">
+  <div class="item2"></div>
+  <div class="item2-content">
+    <h2>Mini Suite</h2>
+    <p>Situated just off our lower level multi-media entertainment area, this guestroom in our Millersburg, Ohio area bed and breakfast offers a commercial chair lift situated just outside the quarters that is conveniently accessible to the driveway and designated parking. Just step outside your room and enjoy the bar area or watch a movie on our 71" plasma television.</p>
+    <ul>
+      <h3>Amenities</h3>
+      <li>Queen size, pillow-top bed dressed in superior quality cotton sheets and deluxe down pillows and comforter.</li>
+      <li>Lush, cozy spa robes</li>
+<li>27" HD mounted flat screen television</li>
+<li>Luxuriously appointed private bath with custom roll-in shower and five-foot turn around for wheelchair accessibility</li>
+      </ul>
   </div>
+</div>
+<div class="room3-wrapper">
+         <div class="item3"></div>
+         <div class="item3-content">
+           <h2>King Suite</h2>
+           <p>Guests seeking accommodations at a historic hotel in Millersburg, Ohio will find the discovery of this guestroom truly Kingly. Romantically secluded on the third floor of our luxury bed and breakfast, it reveals the original brick work of the chimney that was raised in the 1870s when the mansard roof was added. This softly lit room is graced with hardwood floors and ceilings and overlooks the back gardens and scenic hillside.</p>
+           <ul>
+             <li>Queen-size pillow-top bed dressed in triple-sheeted superior quality cotton sheets and deluxe down pillows and comforter.</li>
+             <li>Lush, cozy spa robes.</li>
+             <li>32" HD mounted flat screen television.</li>
+             <li>Double closet.</li>
+             <li>Private bath with custom porcelain tile</li>
+             <li>Oversized pedestal sink.</li>
+             <li>Seating area.</li>
+           </ul>
+         </div>
+        </div>
+    <!-- <div class="item4">4</div> -->
+  </main>
+<footer></footer>
+<link href="style.css" rel="stylesheet" type="text/css" media="screen"/>
 
-
+</body>
 </html>
