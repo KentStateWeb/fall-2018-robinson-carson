@@ -393,6 +393,14 @@ div.room1-wrapper {
   top: 20%;
   left: 5%;
   height: 500px;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 1s ease-in-out;
+}
+
+.isShowing {
+  opacity: 1;
+  transform: translateY(0px);
 }
 
 .item1-content {
@@ -402,12 +410,11 @@ div.room1-wrapper {
   margin: 0;
   z-index: 1;
   position: relative;
-  top: -55%;
+  top: 40px;
   left: 55%;
   width: 35%;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
-
 
 .item2 {
   background-image: url("images/evergreen.jpg");
@@ -415,6 +422,14 @@ div.room1-wrapper {
   top: 20%;
   left: 31%;
   height: 500px;
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all 1s ease-in-out;
+}
+
+.isShowing2 {
+  opacity: 1;
+  transform: translateX(0px);
 }
 
 .room2-wrapper {
@@ -435,7 +450,7 @@ line-height: 1.75em;
 margin: 0;
 z-index: 1;
 position: relative;
-top: -125%;
+top: 100px;
 left: 5%;
 width: 35%;
 box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
@@ -447,6 +462,14 @@ box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   top: 20%;
   left: 5%;
   height: 500px;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all 1s ease-in-out;
+}
+
+.isShowing2 {
+  opacity: 1;
+  transform: translateX(0px);
 }
 
 .room3-wrapper {
@@ -467,7 +490,7 @@ box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   margin: 0;
   z-index: 1;
   position: relative;
-  top: -55%;
+  bottom: 0px;
   left: 55%;
   width: 35%;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
