@@ -347,14 +347,28 @@ margin-right: 2.5em;
 /* ====================================================== */
 /* -------------- Rooms () --------------- */
 
-@media screen and(max-width: 700px){
-  .body-containter {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas:
-      ""
+@media screen and(min-width: 700px){
+  .item1-content{
+    top: -55%;
+    left: 55%;
+    width: 35%;
   }
+}
 
+  @media screen and(min-width: 700px){
+    .item2-content {
+      top: -125%;
+      left: 5%;
+      width: 35%;
+    }
+}
+
+@media screen and(min-width: 700px){
+  .item3-content {
+    top: -55%;
+    left: 55%;
+    width: 35%;
+  }
 }
 
 body.body-container {
@@ -408,9 +422,6 @@ div.room1-wrapper {
   margin: 0;
   z-index: 1;
   position: relative;
-  top: -55%;
-  left: 55%;
-  width: 35%;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
@@ -441,9 +452,6 @@ line-height: 1.75em;
 margin: 0;
 z-index: 1;
 position: relative;
-top: -125%;
-left: 5%;
-width: 35%;
 box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
@@ -473,9 +481,6 @@ box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   margin: 0;
   z-index: 1;
   position: relative;
-  top: -55%;
-  left: 55%;
-  width: 35%;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
