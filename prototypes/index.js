@@ -1,3 +1,17 @@
+$(window).scroll( function() {
+  paraxall();
+})
+
+function paraxall() {
+
+  var yScroll = $(window).scrollTop();
+
+  // .css( propertyName, value )
+  $('.paraxall').css('top', -55 + (yScroll*0.25) + '%')
+}
+
+
+
 /*
 
 // ------------- Smooth Scrolling ---------------
