@@ -40,13 +40,13 @@ main {
 
 /* ================================ Menu  =================================== */
 
-#menuToggle a {
+a {
   text-decoration: none;
   color: white;
   transition: color 0.3s ease;
 }
 
-#menuToggle a:hover {
+a:hover{
   color: tomato;
 }
 
@@ -492,6 +492,7 @@ margin-right: 2.5em;
 
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
 /* ============================ rooms.html ================================== */
+<<<<<<< HEAD
 .container-rms-btn {
   top: -125px;
   left: 29%;
@@ -553,6 +554,8 @@ body.body-container {
   border-radius: 5%;
 }
 
+=======
+>>>>>>> parent of ea923ef... Updated Buttons Rooms
 .room-wrapper {
   position: absolute;
   top: 1220px;
@@ -778,7 +781,7 @@ box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 
 .decoration2 {
   border: .25em solid rgba(151, 43, 174, 0.5);
-  top: 21%;
+  top: 18%;
   left: 4%;
 }
 
