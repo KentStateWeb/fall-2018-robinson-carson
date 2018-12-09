@@ -1,9 +1,10 @@
 /* NOTE:
-  - Date: 12/6/2018   TIME: 2:59pm
+  - Date: 12/7/2018   TIME: 7:30pm
 
   - Optimizing Code.
   - Create a Reservation Bar.
-  -
+  - Add Button to Rooms and Home
+  - Carousel For the testimonials
 
 */
 
@@ -193,10 +194,40 @@ main {
 
 .calendar {
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 5%;
 }
 
+.book-btn {
+  text-transform: uppercase;
+  text-align: center;
+  color: black;
+  font-weight: 500;
+  background-color: white;
+  font-size: 2em;
+  transition: all 0.4s ease;
+}
+
+.book-btn:hover {
+  border-radius: 30%;
+}
+
+.res-wrapper {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  padding: 1em .25em .5em .25em;
+}
+
+.res-wrapper li {
+  margin-left: 1em;
+  border: .1em solid white;
+  padding: 1em;
+}
+
+.res-wrapper h2 {
+  color: white;
+}
 
 .header-logo, .header-logo-rms {
   fill: white;
@@ -303,27 +334,31 @@ main {
 
 
 /* -------------- Section (Testimonials) --------------- */
+/* 00000000000000000000000000000000000000000000000000000000000000000000000000 */
+/* If you're using images in your slider, add this CSS to ensure they take up 100% of the available area */
 
-.testimonials {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 1440px;
-  left: 0px;
-  min-width: 100%;
-  min-height: 400px;
-  background-color: rgba(191, 195, 199, .2);
-  text-align: center;
+.carousel-cell {
+	width: 40%;
+  overflow: hidden;
 }
 
-.testimonials-img {
-  background-image: url("https://i.postimg.cc/Cxft0Kdv/elon-musk.jpg");
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  border-radius: 10em; /* NOT WORKING */
-  min-width: 100px;
-  min-height: 200px;
+.carousel-cell img {
+	width: 50%;
+	height: 50%;
+  border-radius: 100%;
+  margin-left: 10em;
+}
+
+.carousel {
+  width: 100%;
+  position: absolute;
+  top: 1600px;
+}
+
+/* Ensures that Flickity waits until CSS has loaded to calculate the height of the cells */
+.carousel:after {
+  content: 'flickity';
+  display: none; /* hide :after */
 }
 
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
