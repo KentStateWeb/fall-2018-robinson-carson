@@ -4,13 +4,8 @@
   - Create a Reservation Bar.
   -
 */
-
-
-
 /* ------------- NOTE: Remember to create a "Favicon" Icon ----------------- */
 /* Pattern Library */
-
-
 /* ============================== Global ==================================== */
 body {
   max-width: 100%;
@@ -29,7 +24,7 @@ ul {
 }
 
 header {
-    background-color: white;
+  background-color: white;
 }
 
 main {
@@ -41,7 +36,6 @@ a {
 }
 
 /* ================================ Menu  =================================== */
-
 #menuToggle a {
   text-decoration: none;
   color: white;
@@ -57,7 +51,8 @@ a {
   position: relative;
   top: 50px;
   left: 50px;
-  z-index: 1; /* Position in front */
+  z-index: 1;
+  /* Position in front */
 }
 
 #menuToggle input {
@@ -68,8 +63,10 @@ a {
   top: -7px;
   left: -5px;
   cursor: pointer;
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
+  opacity: 0;
+  /* hide this */
+  z-index: 2;
+  /* and place it over the hamburger */
 }
 
 /*
@@ -85,9 +82,9 @@ a {
   border-radius: 3px;
   z-index: 1;
   transform-origin: 4px 0px;
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    opacity 0.55s ease;
 }
 
 #menuToggle span:first-child {
@@ -102,7 +99,7 @@ a {
  * Transform all the slices of hamburger
  * into a crossmark.
  */
-#menuToggle input:checked ~ span {
+#menuToggle input:checked~span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
   background: white;
@@ -111,7 +108,7 @@ a {
 /*
  * Hide the middle one.
  */
-#menuToggle input:checked ~ span:nth-last-child(3) {
+#menuToggle input:checked~span:nth-last-child(3) {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
@@ -119,7 +116,7 @@ a {
 /*
  * The last one should go the other direction
  */
-#menuToggle input:checked ~ span:nth-last-child(2) {
+#menuToggle input:checked~span:nth-last-child(2) {
   transform: rotate(-45deg) translate(0, -1px);
 }
 
@@ -134,16 +131,13 @@ a {
   margin: -100px 0 0 -50px;
   padding: 50px;
   padding-top: 125px;
-
-  background: rgba(47,79,79, .5);
+  background: rgba(47, 79, 79, .5);
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
-
   transform-origin: 0% 0%;
   transform: translate(-100%, 0);
-
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
 }
 
 #menu li {
@@ -154,7 +148,7 @@ a {
 /*
  * Slide it in from the left
  */
-#menuToggle input:checked ~ ul {
+#menuToggle input:checked~ul {
   transform: none;
 }
 
@@ -193,7 +187,6 @@ a {
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
 /* =========================== Index.html  ================================== */
 /* -------------- Header --------------- */
-
 .res-wrapper {
   position: absolute;
   top: 25%;
@@ -286,7 +279,6 @@ a {
 }
 
 /* -------------- Main Section --------------- */
-
 main::before {
   content: "";
   display: block;
@@ -316,7 +308,7 @@ main::before {
   position: relative;
   float: left;
   line-height: 1.85em;
-  opacity: 0 ;
+  opacity: 0;
   max-width: 300px;
   max-height: 400px;
   transform: translateX(-20px);
@@ -489,7 +481,6 @@ main::before {
 
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
 /* ========================= contacts.html ================================== */
-
 body.bcontacts {
   width: 50%;
   height: 50%;
@@ -541,6 +532,7 @@ div.contacts-msg {
   top: 0px;
   left: 0px;
 }
+
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
 /* ======================= Footer Sec (On Contacts Page) ==================== */
 footer.footer-contact {
@@ -584,7 +576,6 @@ iframe {
   height: 500px;
 }
 
-
 .contacts-form {
   width: 90%;
   height: 400px;
@@ -601,7 +592,6 @@ input.fullName, .email {
   padding-left: .2em;
 }
 
-
 /* ===================================================== */
 /* -------------- Section (Footer) --------------- */
 footer {
@@ -612,8 +602,8 @@ footer {
 }
 
 .address {
-align-items: center;
-margin-right: 2.5em;
+  align-items: center;
+  margin-right: 2.5em;
 }
 
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
@@ -693,7 +683,6 @@ margin-right: 2.5em;
 }
 
 /* ---------------------------- Main (rooms.html) ----------------------------*/
-
 main {
   width: 100%;
   position: relative;
@@ -704,7 +693,6 @@ main {
 }
 
 /* ---------------------------- Rooms Images ---------------------------------*/
-
 .item1, .item2, .item3 {
   width: 65%;
   height: 500px;
@@ -743,7 +731,6 @@ main {
 /* ------------------------------ Wrapper -----------------------------------
  *  The container that surrounds the image and content.
  */
-
 .decoration, .decoration2, .decoration3 {
   background-color: clear;
   width: 175px;
@@ -754,7 +741,7 @@ main {
 }
 
 .decoration {
-  border: .25em solid rgba(255,223,0, 1);
+  border: .25em solid rgba(255, 223, 0, 1);
   top: 4%;
   left: 55%;
 }
@@ -771,7 +758,6 @@ main {
   left: 53%;
 }
 
-
 .room1-wrapper, .room2-wrapper, .room3-wrapper {
   width: 100%;
   height: 640px;
@@ -782,7 +768,7 @@ main {
 }
 
 .room1-wrapper {
-  top:  0%;
+  top: 0%;
   left: 0%;
 }
 
@@ -809,7 +795,6 @@ main {
 /* ------------------------------ Content -----------------------------------
  *  This is layout for the information that is related to the image
  */
-
 .item1-content, .item2-content, .item3-content {
   position: relative;
   font-size: 1.01em;
@@ -839,24 +824,23 @@ main {
 
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
 /* =========================== Media Queries ================================ */
-
-@media screen and(min-width: 700px){
-  .item1-content{
+@media screen and(min-width: 700px) {
+  .item1-content {
     top: -55%;
     left: 55%;
     width: 35%;
   }
 }
 
-  @media screen and(min-width: 700px){
-    .item2-content {
-      top: -125%;
-      left: 5%;
-      width: 35%;
-    }
+@media screen and(min-width: 700px) {
+  .item2-content {
+    top: -125%;
+    left: 5%;
+    width: 35%;
+  }
 }
 
-@media screen and(min-width: 700px){
+@media screen and(min-width: 700px) {
   .item3-content {
     top: -55%;
     left: 55%;
