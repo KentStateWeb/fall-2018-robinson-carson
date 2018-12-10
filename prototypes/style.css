@@ -21,6 +21,7 @@ body {
   margin: 0;
   padding: 0;
   background: clear;
+  overflow-x: hidden;
 }
 
 ul {
@@ -33,6 +34,10 @@ header {
 
 main {
   margin: 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 /* ================================ Menu  =================================== */
@@ -253,15 +258,16 @@ main {
 }
 
 .hero-img {
-  position: absolute;
-  top: 0px;
+  position: relative;
+  top: -30px;
   left: 0px;
+  padding-top: 1.25em;
   background-image: url("images/cabin-creek-landing-bed-and-breakfast-marion-mt.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
-  height: 100%;
+  height: 650px;
   width: 100%;
 }
 
@@ -280,67 +286,177 @@ main {
 }
 
 /* -------------- Main Section --------------- */
-header::after {
+
+main::before {
   content: "";
   display: block;
-  clear: both;
+  height: 10px;
+}
+
+.main-heading {
+  position: relative;
+  margin: 1em;
+  padding: 2em;
+  color: black;
+  top: 0px;
+  left: 0px;
+  min-width: 90%;
+  min-height: 500px;
+  text-align: center;
 }
 
 .main-heading::after {
   content: "";
   display: block;
   clear: both;
-  background: pink;
+  height: 10px;
 }
 
-.main-heading {
-  display: block;
-  margin-top: 4em;
-  color: black;
-  position: absolute;
-  top: 100%;
-  left: 0px;
-  min-width: 100%;
-  min-height: 60%;
-  text-align: center;
-}
-
-.content-left::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
-.content-right::after {
-  content: "";
-  display: block;
-  clear: both;
-}
 .content-left {
+  position: relative;
   float: left;
-  width: 400px;
-  height: 400px;
-  margin-left: 8em;
-  margin-top: 3em;
-  line-height: 2.25em;
-  opacity: 0;
+  line-height: 1.85em;
+  opacity: 0 ;
+  max-width: 300px;
+  max-height: 400px;
   transform: translateX(-20px);
   transition: all 1s ease-in;
+  margin-left: 4em;
+  margin-top: 0;
+  top: -20px;
+  left: 10px;
+  padding: 2em 2em 8em 2em;
+  border: .1em solid yellow;
 }
 
 .content-right {
   float: right;
   margin: 0;
   opacity: 0;
+  width: 100px;
+  height: 100px;
   transform: translateX(10px);
   transition: all 1s ease-in;
-  width: 300px;
+}
+
+.specials-wrapper {
+  position: relative;
+  top: 200px;
+  margin-top: 1em;
+  padding-bottom: 2em;
+  text-align: center;
+  width: 100%;
+}
+
+.specials-wrapper div {
+  margin: 3em;
+}
+
+.specials-wrapper::after {
+  content: "";
+  display: block;
+  height: 5px;
+  clear: both;
+}
+
+.spl-img {
+  float: left;
+  position: relative;
+  left: 20px;
+  background-image: url("images/breakfast-in-bed.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 400px;
   height: 400px;
+  transform: translateY(-100px);
+  opacity: 0;
+  transition: all 1s ease-in;
+}
+
+.spl-content {
+  color: black;
+  text-align: justify;
+  line-height: 1.75;
+  padding: 0 10em 0 0;
+  border: .15em solid rgba(94, 121, 147, 1);
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 1s ease-in;
+}
+
+.spl-content span {
+  font-size: 3em;
+  letter-spacing: .1em;
+}
+
+.spl-btn {
+  padding-top: 1em;
+  text-align: center;
+  position: relative;
+  top: -20px;
+  left: 87%;
+  width: 100px;
+  height: 50px;
+  border: .1em solid black;
+}
+
+.spl-btn:hover {
+  color: #FFF;
+  background: #61574B;
+  border-radius: 20%;
+}
+
+.specials-wrapper::after {
+  height: 5px;
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.isShowing-main2 {
+  opacity: 1;
+  transform: translateY(0px);
 }
 
 .isShowing-main {
   opacity: 1;
   transform: translateX(0px);
+}
+
+.our-story-wrapper {
+  position: relative;
+  top: 400px;
+  margin-top: 2em;
+  padding-bottom: 2em;
+  text-align: center;
+  width: 100%;
+}
+
+.os-content {
+  float: left;
+  color: black;
+  text-align: justify;
+  line-height: 1.75;
+  padding: 0 30em 0 10em;
+  border: .15em solid rgba(255, 223, 0, 1);
+}
+
+.os-img {
+  position: relative;
+  top: -250px;
+  right: 30px;
+  float: right;
+  background-image: url("images/Owners-Buckeye.jpg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 400px;
+  height: 400px;
+}
+
+.os-content span {
+  font-size: 3em;
+  letter-spacing: .1em;
 }
 
 .img1 {
@@ -369,31 +485,6 @@ header::after {
   right: 200px;
   width: 175px;
   height: 175px;
-}
-
-
-/* -------------- Section (Testimonials) --------------- */
-
-.testimonials {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 1440px;
-  left: 0px;
-  min-width: 100%;
-  min-height: 400px;
-  background-color: rgba(191, 195, 199, .2);
-  text-align: center;
-}
-
-.testimonials-img {
-  background-image: url("https://i.postimg.cc/Cxft0Kdv/elon-musk.jpg");
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  border-radius: 10em; /* NOT WORKING */
-  min-width: 100px;
-  min-height: 200px;
 }
 
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
