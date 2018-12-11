@@ -190,10 +190,9 @@ a {
 /* =========================== Index.html  ================================== */
 /* -------------- Header --------------- */
 .res-wrapper {
-  position: absolute;
+
   top: 25%;
   left: 0%;
-  display: flex;
   flex-direction: row;
   width: 100%;
   text-align: center;
@@ -236,9 +235,6 @@ a {
   position: relative;
 }
 
-.header-logo-rms {
-  position: absolute;
-}
 
 /*
  * Stylings for the "Home Sweet Home" slogan.
@@ -593,9 +589,14 @@ input.fullName, .email {
   margin-left: 1em;
   padding-left: .2em;
 }
-}
-/* ===================================================== */
 
+/* ===================================================== */
+@media only screen and (min-width: 700px){
+  .res-wrapper {
+    position: absolute;
+    display: flex;
+  }
+}
 
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
 
