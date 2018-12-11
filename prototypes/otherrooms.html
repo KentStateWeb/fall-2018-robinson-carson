@@ -1,15 +1,7 @@
-<!DOCTYPE html>
-<html lang="en-us">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<html>
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Buckeye Bed and Breakfast</title>
-  <meta name="description" content="Page Description Goes Here">
-  <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <script type="text/javascript">
@@ -20,27 +12,31 @@
 
       function paraxall() {
         var yScroll = $(window).scrollTop();
-
-        if ((yScroll + 120) > $('.main-heading').offset().top) {
-          $('.content-left').addClass('isShowing-main');
-          $('.content-right').addClass('isShowing-main');
+        // .css( propertyName, value )
+        $('.para1').css('top', (-yScroll * .76) + 'px')
+        $('.para2').css('top', (-yScroll * .30) + 'px')
+        $('.para3').css('top', (-yScroll * .20) + 'px')
+        if ((yScroll + 170) > $('.landing-element1').offset().top) {
+          $('.item1').addClass('isShowing');
         }
-        if ((yScroll + 300) > $('.specials-wrapper').offset().top) {
-          $('.spl-img').addClass('isShowing-main2');
-          $('.spl-content').addClass('isShowing-main2');
+        if ((yScroll + 250) > $('.landing-element2').offset().top) {
+          $('.item2').addClass('isShowing2');
+        }
+        if ((yScroll + 340) > $('.landing-element3').offset().top) {
+          $('.item3').addClass('isShowing3');
         }
       };
     });
   </script>
 </head>
 
-<body>
+<body class="body-container">
   <nav role="navigation">
     <div id="menuToggle">
       <!--
-        Hidden checkbox is used as click reciever,
-        so you can use the :checked selector on it.
-        -->
+      Hidden checkbox is used as click reciever,
+      so you can use the :checked selector on it.
+      -->
       <input type="checkbox" />
       <span></span>
       <span></span>
@@ -49,20 +45,14 @@
         <a href="index.html">
           <li>Home</li>
         </a>
-        <a href="#specials">
-          <li>Specials</li>
-        </a>
-        <a href="index.html">
-          <li>Book</li>
-        </a>
         <a href="rooms.html">
           <li>Rooms</li>
         </a>
-        <a href="#our_story">
-          <li>Our Story</li>
-        </a>
         <a href="contacts.html">
           <li>Contact</li>
+        </a>
+        <a href="index.html">
+          <li>Book</li>
         </a>
         <ul id="social">
           <a href="http://www.facebook.com">
@@ -84,8 +74,9 @@
       </ul>
     </div>
   </nav>
-  <header class="hero-img"> <svg class="header-logo" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 93.34">
-      <title>Buckeye Bed and Breakfast</title>
+  <header class="rooms-header">
+    <svg class="header-logo-rms">
+      id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 93.34"><title>bbb</title>
       <path class="cls-1" d="M196.15,306.7h0a5,5,0,0,0,2.9-4.3c0-3.9-3-5.5-6-5.5H184c-.6,0-.8.2-.8.8v1.1c0,.6.3.8.9.8.9,0,1.3.3,1.3,1v14c0,.8-.3,1-1.3,1-.7,0-.9.2-.9.8v1.1c0,.5.2.8.8.8h8.8c3.9,0,7.5-1.5,7.5-6C200.25,308.4,197.75,307.3,196.15,306.7Zm-7.3-7.1h3.3a3.23,3.23,0,0,1,3.4,2.9c0,1.9-1.3,3.2-3.6,3.2h-3.1Zm3.5,15.9h-3.5v-7.2h3.3c2.8,0,4.6,1.4,4.6,3.6C196.75,313.7,194.75,315.5,192.35,315.5Z"
         transform="translate(-183.15 -247.06)" />
       <path class="cls-1" d="M227.25,296.9h-6.2c-.7,0-.8.2-.8.8v1.1c0,.6.3.8.9.8.9,0,1.3.3,1.3,1v10c0,3.4-1.4,5.3-4.6,5.3-2.8,0-4.6-2.3-4.6-5.3v-10c0-.8.3-1,1.3-1s1.2-.2,1.2-.9v-1.1c0-.4-.3-.6-1-.6H208c-.6,0-.8.1-.8.6v1.2c0,.6.3.8,1.4.8.8,0,1.2.3,1.2,1v11c0,5,4.1,7,8.1,7,4.7,0,7.9-2.5,7.9-7v-11c0-.8.4-1,1.4-1,.7,0,.9-.2.9-.8v-1.1C228.05,297.1,227.85,296.9,227.25,296.9Z"
@@ -131,127 +122,297 @@
       <path class="cls-1" d="M245.05,285.4a2,2,0,0,1-1.7-1.2,1.75,1.75,0,0,1,1.1-2.2l46.2-16.1a1.74,1.74,0,0,1,1.1,3.3l-46.1,16.1A1.27,1.27,0,0,1,245.05,285.4Z" transform="translate(-183.15 -247.06)" />
       <path class="cls-1" d="M268.25,268.8a1.79,1.79,0,0,1-1.8-1.8v-4.5a1.8,1.8,0,0,1,3.6,0V267A1.93,1.93,0,0,1,268.25,268.8Z" transform="translate(-183.15 -247.06)" />
     </svg>
-    <form action="" class="calendar">
-      <ul class="res-wrapper">
-        <li>
-          <h2>CHECK IN</h2><input type="datetime-local" name="reservation">
-        </li>
-        <li>
-          <h2>CHECK OUT</h2><input type="datetime-local" name="reservation">
-        </li>
-        <li>
-          <h2>ADULTS</h2><input type="number" name="reservation" value="1">
-        </li>
-        <li>
-          <h2>CHILDREN</h2><input type="number" name="reservation" value="1">
-        </li>
-        <li class="book-btn">Book</li>
-      </ul>
-    </form>
-    <span class="motto">Home Sweet Home.</span>
-    <a href="#main">
-      <div class="menu-btn">scroll down</div>
+    <div class="quote">
+      <hr>
+      <div>"Sometimes the most productive</div>
+      <div>thing you can do is relax"</div>
+      <div>- Mark Black</div>
+      <hr>
+    </div>
+    <ul class="container-rms-btn">
+      <li class="masterSuite"><a href="#main">Master Suite</a></li>
+      <li class="miniSuite"><a href="#mini-Suite">Mini Suite</a></li>
+      <li class="kingSuite"><a href="#king-Suite">King Suite</a></li>
+    </ul>
   </header>
-  <main>
-    <section class="main-heading" id="main">
-      <div class="content-left">
-        <h1>The Ultimate Romantic Getaway</h1>
-        <p>Situated in the heart of Ohio, this enchanting bed & breakfast is a fabulous getaway for newlywed and couples looking to get away from the hustle and bustle of daily life. </p>
-        <h2>Head downtown for shopping and dining.</h2>
-        <p>Imagine... a romantic walk down the winding pathways of Middlebury, Ohio. Or cuddle up by the fire.</p>
+  <main id="main">
+    <div class="room1-wrapper landing-element1">
+      <div class="decoration"></div>
+      <div class="item1"></div>
+      <div class="item1-content para1">
+        <h2>Master Suite</h2>
+        <p>Majestically appointed with only the finest furnishings and décor, this Jacuzzi suite at our elegant bed and breakfast is ideal for romantic getaways in Ohio. Overlooking the front garden and formal fountain with a view of the quaint town of Millersburg.</p>
+        <ul id="bullet-pnts">
+          <h3>Amenities</h3>
+          <li>Queen-size, four-poster, pillow-top bed dressed in triple-sheeted superior quality cotton sheets and deluxe down pillows and comforter.</li>
+          <li>Lush, cozy spa robes and oversized luxurious bath sheets, a perfect accompaniment to your relaxing spa bath.</li>
+          <li>Two gas fireplaces</li>
+          <li>Walk-in closet</li>
+          <li>32" HD flat-screen television</li>
+        </ul>
       </div>
-      <div class="content-right">
-        <img src="images\horseshoe adpic reduced.JPG" alt="" class="img1">
-        <img src="images\apple-to-zebra-couple-having-dinner-at-a-restaurant.jpg" alt="" class="img2">
-        <img src="images\860053.food4.jpg" alt="" class="img3">
+    </div>
+    <div class="room2-wrapper landing-element2" id="mini-Suite">
+      <div class="decoration2"></div>
+      <div class="item2"></div>
+      <div class="item2-content para2">
+        <h2>Mini Suite</h2>
+        <p>Situated just off our lower level multi-media entertainment area, this guestroom in our Millersburg, Ohio area bed and breakfast offers a commercial chair lift situated just outside the quarters that is conveniently accessible to the
+          driveway and designated parking. Just step outside your room and enjoy the bar area or watch a movie on our 71" plasma television.</p>
+        <ul id="bullet-pnts">
+          <h3>Amenities</h3>
+          <li>Queen size, pillow-top bed dressed in superior quality cotton sheets and deluxe down pillows and comforter.</li>
+          <li>Lush, cozy spa robes</li>
+          <li>27" HD mounted flat screen television</li>
+          <li>Luxuriously appointed private bath with custom roll-in shower and five-foot turn around for wheelchair accessibility</li>
+        </ul>
       </div>
-    </section>
-
-    <section class="specials-wrapper" id="specials">
-      <div class="spl-img"></div>
-      <div class="spl-content">
-        <h1><span>S</span>pecials</h1>
-        <p>Make an awesome sentimental Buckeye escape at our top of the line motel. View regular specials that incorporate sentiment bundles, action bundles and a minute ago limits.</p>
-        <p>In the event that celebrating a special occasion or simply need to invest some energy resting and loosening up we offer an assortment of sentimental Millersburg escape bundles, and have something to meet the majority of your Amish Country
-          travel needs.</p>
+    </div>
+    <div class="room3-wrapper landing-element3" id="king-Suite">
+      <div class="decoration3"></div>
+      <div class="item3"></div>
+      <div class="item3-content para3">
+        <h2>King Suite</h2>
+        <p>Guests seeking accommodations at a historic hotel in Millersburg, Ohio will find the discovery of this guestroom truly Kingly. Romantically secluded on the third floor of our luxury bed and breakfast, it reveals the original brick work of
+          the chimney that was raised in the 1870s when the mansard roof was added. This softly lit room is graced with hardwood floors and ceilings and overlooks the back gardens and scenic hillside.</p>
+        <ul id="bullet-pnts">
+          <li>Queen-size pillow-top bed dressed in triple-sheeted superior quality cotton sheets and deluxe down pillows and comforter.</li>
+          <li>Lush, cozy spa robes.</li>
+          <li>32" HD mounted flat screen television.</li>
+          <li>Double closet.</li>
+          <li>Private bath with custom porcelain tile</li>
+          <li>Oversized pedestal sink.</li>
+          <li>Seating area.</li>
+        </ul>
       </div>
-    </section>
-    <div class="spl-btn" href="index.html">Book</div>
-    <section class="our-story-wrapper" id="our_story">
-      <div class="os-content">
-        <h2><span>O</span>ur Story</h2>
-        <p>It all began when John and Barbara dreamt to possess a quaint little inn. After twelve years they have constructed a resort that couples can come and unwind and have a fabulous time.</p>
-      </div>
-      <div class="os-img"></div>
-    </section>
+    </div>
   </main>
-  <footer class="footer-distributed">
-
-
-    <div class="footer-left">
-
-
-      <h3>Buckeye Bed <span>and</span> Breakfast</h3>
-
-
-      <p class="footer-links">
-        <a href="#">Home</a>
-        ·
-        <a href="#">Rooms</a>
-        ·
-        <a href="#">Book</a>
-        ·
-        <a href="#">Contact</a>
-      </p>
-
-
-      <p class="footer-company-name">Buckeye Bed and Breakfast &copy; 2018</p>
-    </div>
-
-
-    <div class="footer-center">
-
-
-      <div>
-        <i class="fa fa-map-marker"></i>
-        <p><span>1234 Buckeye Lane</span> Millersburg, Ohio, 44654</p>
-      </div>
-
-
-      <div>
-        <i class="fa fa-phone"></i>
-        <p>+1(330)636 7717</p>
-      </div>
-
-
-      <div>
-        <i class="fa fa-envelope"></i>
-        <p><a href="mailto:buckeyebb@gmail.com">buckeyebb@gmail.com</a></p>
-      </div>
-
-
-    </div>
-
-
-    <div class="footer-right">
-
-
-      <p class="footer-company-about">
-        <span>About Us</span>
-        Buckeye Bed and Breakfast aims to welcome all people and offers a one of a kind, all inclusive, experience.
-      </p>
-
-
-    </div>
-
-
-    </div>
-
-
-  </footer>
+  <footer></footer>
   <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
-  <!-- Add your stylesheet here, before the closing HTML tag
--->
 </body>
 
 </html>
+
+
+<!--
+============================ rooms.html ==================================
+.container-rms-btn {
+ top: -125px;
+ left: 29%;
+ position: relative;
+ display: flex;
+ flex-direction: row;
+ padding: 0;
+ margin: 0;
+}
+
+.masterSuite a, .miniSuite a, .kingSuite a {
+ font-size: 1.2em;
+ border: .1em solid white;
+ color: white;
+ margin-left: 3em;
+ padding: .25em;
+ text-decoration: none;
+}
+
+.masterSuite:hover a, .miniSuite:hover a, .kingSuite:hover a {
+ color: black;
+ font-weight: bold;
+ background-color: white;
+ padding: .50em;
+ border-radius: 5%;
+}
+
+.room-wrapper {
+ position: absolute;
+ top: 1220px;
+ left: 0px;
+ background-color: rgba(112, 124, 139, .5);
+ min-height: 700px;
+ min-width: 100%;
+}
+
+.room-img {
+ position: absolute;
+ top: 50px;
+ left: 50px;
+ min-width: 600px;
+ min-height: 350px;
+ border: 1em solid white;
+}
+
+.body-container {
+ width: 100%;
+ padding: 0;
+ margin: 0;
+}
+
+.quote {
+ color: white;
+ font-size: 4.5em;
+ position: relative;
+ top: 1%;
+ left: 2%;
+ padding: 2em;
+ margin: 0;
+}
+
+.rooms-header {
+ background-image: url("images/michael-shannon-474807-unsplash.jpg");
+ background-position: center;
+ background-size: cover;
+ background-repeat: no-repeat;
+ width: 100%;
+ height: 100%;
+ position: relative;
+ top: -26px;
+ left: 0px;
+ right: 0px;
+}
+
+---------------------------- Main (rooms.html) ----------------------------
+main {
+ width: 100%;
+ position: relative;
+ top: -4%;
+ left: 0%;
+ margin: 0;
+ padding: 0;
+}
+
+---------------------------- Rooms Images ---------------------------------
+.item1, .item2, .item3 {
+ width: 65%;
+ height: 500px;
+ position: relative;
+ background-size: cover;
+ background-repeat: no-repeat;
+ background-position: center;
+ opacity: 0;
+}
+
+.item1 {
+ background-image: url("images/room5.jpg");
+ top: 15%;
+ left: 4%;
+ transform: translateY(-20px);
+ transition: all 1s ease-in-out;
+}
+
+.item2 {
+ background-image: url("images/evergreen.jpg");
+ top: 20%;
+ left: 31%;
+ transform: translateX(100px);
+ transition: all 1s ease-in-out;
+}
+
+.item3 {
+ background-image: url("images/fireplace.jpg");
+ top: 10%;
+ left: 5%;
+ transform: translateX(-20px);
+ transition: all 1s ease-in-out;
+}
+
+
+------------------------------ Wrapper -----------------------------------
+  The container that surrounds the image and content.
+
+.decoration, .decoration2, .decoration3 {
+ background-color: clear;
+ width: 175px;
+ height: 50px;
+ z-index: 99;
+ position: absolute;
+ padding: 0.05em;
+}
+
+.decoration {
+ border: .25em solid rgba(255, 223, 0, 1);
+ top: 4%;
+ left: 55%;
+}
+
+.decoration2 {
+ border: .25em solid rgba(151, 43, 174, 0.5);
+ top: 21%;
+ left: 4%;
+}
+
+.decoration3 {
+ border: .25em solid rgba(255, 136, 56, .75);
+ top: 20%;
+ left: 53%;
+}
+
+.room1-wrapper, .room2-wrapper, .room3-wrapper {
+ width: 100%;
+ height: 640px;
+ display: block;
+ padding: 0;
+ margin: 0;
+ position: relative;
+}
+
+.room1-wrapper {
+ top: 0%;
+ left: 0%;
+}
+
+.room2-wrapper {
+ top: -40%;
+ left: 0%;
+}
+
+.room3-wrapper {
+ top: 0%;
+ left: 0%;
+}
+
+.isShowing, .isShowing3 {
+ opacity: 1;
+ transform: translateY(0px);
+}
+
+.isShowing2 {
+ opacity: 1;
+ transform: translateX(0px);
+}
+
+------------------------------ Content -----------------------------------
+  This is layout for the information that is related to the image
+
+.item1-content, .item2-content, .item3-content {
+ position: relative;
+ font-size: 1.01em;
+ background-color: white;
+ padding: 1em 1.5em 1em 1.5em;
+ line-height: 1.75em;
+ margin: 0;
+ z-index: 1;
+ box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+hr {
+ color: rgba(255, 255, 255, .4);
+ width: 40%;
+}
+
+.item1-content {
+ left: 55%;
+ width: 35%;
+}
+
+.item2-content {
+ top: 100px;
+ left: 5%;
+ width: 35%;
+}
+
+.item3-content {
+ left: 55%;
+ width: 35%;
+}
+*/
+-->
