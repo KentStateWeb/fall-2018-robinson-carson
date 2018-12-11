@@ -1,117 +1,455 @@
 /* NOTE:
-  - Date: 12/3/2018   TIME: 2:59pm
-
-  - Fixed the Nav Bar - Using Flexbox.
-
+  - Date: 12/6/2018   TIME: 2:59pm
+  - Optimizing Code.
+  - Create a Reservation Bar.
+  -
 */
+/* ------------- NOTE: Remember to create a "Favicon" Icon ----------------- */
+/* Pattern Library */
+/* ============================== Global ==================================== */
 
-
-
-
-
-/* ------------ Global -------------- */
 body {
   max-width: 100%;
   padding: 1em;
-  font-family: Playfair Display, Arial, sans-serif;
+  font-family: 'Playfair Display SC', serif;
   display: flex;
   flex-direction: column;
+  margin: 0;
+  padding: 0;
+  background: clear;
+  overflow-x: hidden;
 }
 
-ul {
-  list-style: none;
+li {
+  list-style-type: none;
 }
 
 header {
-    background-color: white;
-  }
+  background-color: white;
+}
 
 main {
   margin: 0;
 }
 
-
-
-/* ------------- NOTE: Remember to create a "Favicon" Icon ----------------- */
-/* Pattern Library */
-
-
-/* -------------- Header --------------- */
-.header-logo {
-  fill: white !important;
-  stroke: rgba(0, 0, 0, .08);
-  width: 30%;
-  height: 30%;
-  position: relative;
-  top: 175px;
-  left: 33%;
-  border: .2em solid rgba(255, 255, 255, 1);
-  padding: 2em;
+a {
+  text-decoration: none;
 }
 
+/* ================================ Menu  =================================== */
+#menuToggle a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover {
+  color: tomato;
+}
+
+#menuToggle {
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  z-index: 1;
+  /* Position in front */
+}
+
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0;
+  /* hide this */
+  z-index: 2;
+  /* and place it over the hamburger */
+}
+
+/*
+ * Used to create the hamburger symbol
+ */
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: black;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+/*
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked~span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: white;
+}
+
+/*
+ * Hide the middle one.
+ */
+#menuToggle input:checked~span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * The last one should go the other direction
+ */
+#menuToggle input:checked~span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu {
+  position: absolute;
+  width: 200px;
+  height: 489px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  background: rgba(47, 79, 79, .5);
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#menu li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * Slide it in from the left
+ */
+#menuToggle input:checked~ul {
+  transform: none;
+}
+
+#social {
+  position: absolute;
+  top: 85%;
+  left: 0px;
+  display: flex;
+  flex-direction: row;
+}
+
+.spacing {
+  margin: 0 0 0 1em;
+}
+
+/* ------------------------------ Scroll Btn -------------------------------- */
+.click-btn-rms, .menu-btn {
+  font-size: 1.2em;
+  border: .1em solid white;
+  color: white;
+  bottom: 0px;
+  margin: 0;
+  padding: .25em;
+  position: absolute;
+  bottom: 10%;
+  left: 44%;
+  transition: all 0.3s ease-in;
+}
+
+.click-btn-rms:hover, .menu-btn:hover {
+  color: black;
+  background-color: white;
+  padding: .50em;
+}
+
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+/* =========================== Index.html  ================================== */
+/* -------------- Header --------------- */
+.res-wrapper {
+  position: absolute;
+  top: 25%;
+  left: 0%;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  text-align: center;
+  color: white;
+  margin: 0;
+}
+
+.res-wrapper li {
+  border: .1em solid white;
+  margin: .5em;
+  padding: 1em;
+}
+
+.res-wrapper li:nth-child(5) {
+  font-size: 3em;
+  color: #FFF;
+  padding: 1em;
+  margin-right: 0;
+}
+
+.res-wrapper li:nth-child(5):hover {
+  font-size: 3em;
+  color: #000;
+  background-color: #FFF;
+  padding: 1em;
+  margin-right: 0;
+  border-radius: 10%;
+}
+
+.header-logo, .header-logo-rms {
+  fill: white;
+  stroke: none;
+  top: 5%;
+  left: 85%;
+}
+
+.header-logo {
+  width: 15%;
+  height: 15%;
+  position: relative;
+}
+
+.header-logo-rms {
+  position: absolute;
+}
+
+/*
+ * Stylings for the "Home Sweet Home" slogan.
+ */
 .motto {
   color: white;
   font-size: 3em;
-  font-weight: 100;
-  font-family: 'Pacifico', cursive;
+  font-weight: lighter;
   position: absolute;
-  top: 70%;
-  left: 35%;
-  text-shadow: -1px -1px 0 rgba(0, 0, 0, .45),
-		1px -1px 0 rgba(0, 0, 0, .45),
-		-1px 1px 0 rgba(0, 0, 0, .45),
-		1px 1px 0 rgba(0, 0, 0, .45);
+  bottom: 20%;
+  left: 32%;
 }
 
 .hero-img {
-  position: absolute;
-  top: 0px;
+  position: relative;
+  top: -30px;
   left: 0px;
-  background-image: url("images/cabin-creek-landing-bed-and-breakfast-marion-mt.jpg"); */
+  padding-top: 1.25em;
+  background-image: url("images/cabin-creek-landing-bed-and-breakfast-marion-mt.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
-  height: 100%;
+  height: 650px;
   width: 100%;
 }
 
-div.arrow {
-  border: .1em solid white;
-  padding: .2em;
-  font-weight: bold;
-  font-size: 1.1em;
+/*
+ * Create a black tint over the header image.
+ */
+.hero-img:before, .rooms-header:before {
+  content: "";
+  display: block;
   position: absolute;
-  bottom: 14%;
-  left: 46%;
-  color: RGB(
- 62, 75, 118);
-  /*opacity: 0.5;*/
-  transition: color 0.5s ease-in-out;
-}
-
-div.arrow:hover {
-  /*opacity: 1;*/
-  color: black;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.55);
 }
 
 /* -------------- Main Section --------------- */
+main::before {
+  content: "";
+  display: block;
+  height: 10px;
+}
 
-main.main-heading {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  font-family: Playfair Display;
-  padding-left: 4em;
+.main-heading {
+  position: relative;
+  margin: 1em;
+  padding: 2em;
   color: black;
-  position: absolute;
-  top: 100%;
+  top: 0px;
   left: 0px;
-  background: linear-gradient(rgba(255, 187, 218, .2), rgba(254, 89, 164, .3));
-  min-width: 100%;
-  min-height: 100%;
+  min-width: 90%;
+  min-height: 500px;
   text-align: center;
-  padding-top: 5em;
-  padding-bottom: 5em;
+}
+
+.main-heading::after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 10px;
+}
+
+.content-left {
+  position: relative;
+  float: left;
+  line-height: 1.85em;
+  opacity: 0;
+  max-width: 300px;
+  max-height: 400px;
+  transform: translateX(-20px);
+  transition: all 1s ease-in;
+  margin-left: 4em;
+  margin-top: 0;
+  top: -20px;
+  left: 10px;
+  padding: 2em 2em 8em 2em;
+  border: .1em solid yellow;
+}
+
+.content-right {
+  float: right;
+  margin: 0;
+  opacity: 0;
+  width: 100px;
+  height: 100px;
+  transform: translateX(10px);
+  transition: all 1s ease-in;
+}
+
+.specials-wrapper {
+  position: relative;
+  top: 200px;
+  margin-top: 1em;
+  padding-bottom: 2em;
+  text-align: center;
+  width: 100%;
+}
+
+.specials-wrapper div {
+  margin: 3em;
+}
+
+.specials-wrapper::after {
+  content: "";
+  display: block;
+  height: 5px;
+  clear: both;
+}
+
+.spl-img {
+  float: left;
+  position: relative;
+  left: 20px;
+  background-image: url("images/breakfast-in-bed.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 400px;
+  height: 400px;
+  transform: translateY(-100px);
+  opacity: 0;
+  transition: all 1s ease-in;
+}
+
+.spl-content {
+  color: black;
+  text-align: justify;
+  line-height: 1.75;
+  padding: 0 10em 0 0;
+  border: .15em solid rgba(94, 121, 147, 1);
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 1s ease-in;
+}
+
+.spl-content span {
+  font-size: 3em;
+  letter-spacing: .1em;
+}
+
+.spl-btn {
+  padding-top: 1em;
+  text-align: center;
+  position: relative;
+  top: -20px;
+  left: 87%;
+  width: 100px;
+  height: 50px;
+  border: .1em solid black;
+}
+
+.spl-btn:hover {
+  color: #FFF;
+  background: #61574B;
+  border-radius: 20%;
+}
+
+.specials-wrapper::after {
+  height: 5px;
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.isShowing-main2 {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.isShowing-main {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+.our-story-wrapper {
+  position: relative;
+  top: 400px;
+  margin-top: 2em;
+  padding-bottom: 2em;
+  text-align: center;
+  width: 100%;
+}
+
+.os-content {
+  float: left;
+  color: black;
+  text-align: justify;
+  line-height: 1.75;
+  padding: 0 30em 0 10em;
+  border: .15em solid rgba(255, 223, 0, 1);
+}
+
+.os-img {
+  position: relative;
+  top: -250px;
+  right: 30px;
+  float: right;
+  background-image: url("images/Owners-Buckeye.jpg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 400px;
+  height: 400px;
+}
+
+.os-content span {
+  font-size: 3em;
+  letter-spacing: .1em;
 }
 
 .img1 {
@@ -142,83 +480,8 @@ main.main-heading {
   height: 175px;
 }
 
-.content-left {
-
-}
-
-/* -------------- Section (Room) --------------- */
-.room-wrapper {
-  position: absolute;
-  top: 1220px;
-  left: 0px;
-  background-color: rgba(112, 124, 139, .5);
-  min-height: 700px;
-  min-width: 100%;
-}
-
-.room-img {
-  position: absolute;
-  top: 50px;
-  left: 50px;
-  min-width: 600px;
-  min-height: 350px;
-  border: 1em solid white;
-}
-
-.overlapping_sqr {
-  min-width: 350px;
-  min-height: 450px;
-  position: absolute;
-  top: 250px;
-  right: 250px;
-  background-color: rgba(43, 46, 49, .8);
-}
-
-.empty-box {
-  min-width: 350px;
-  min-height: 200px;
-  border: .25em solid rgba(210, 180, 140, 1);
-  position: absolute;
-  top: 150px;
-  right: 140px;
-  background-color: transparent;
-}
-
-.price {
-    position: absolute;
-    bottom: 0px;
-    left: 10px;
-    color: rgba(210, 180, 140, 1);
-    font-size: 3em;
-}
-
-/* -------------- Section (Testimonials) --------------- */
-
-.testimonials {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 1440px;
-  left: 0px;
-  min-width: 100%;
-  min-height: 400px;
-  background-color: rgba(191, 195, 199, .2);
-  text-align: center;
-}
-
-.testimonials-img {
-  background-image: url("https://i.postimg.cc/Cxft0Kdv/elon-musk.jpg");
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  border-radius: 10em; /* NOT WORKING */
-  min-width: 100px;
-  min-height: 200px;
-}
-
-/* -------------- Page (Contacts) --------------- */
-
-
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+/* ========================= contacts.html ================================== */
 body.bcontacts {
   width: 50%;
   height: 50%;
@@ -271,7 +534,8 @@ div.contacts-msg {
   left: 0px;
 }
 
-/* ====== Footer Sec (On Contacts Page) ======= */
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+/* ======================= Footer Sec (On Contacts Page) ==================== */
 footer.footer-contact {
   position: absolute;
   top: 1200px;
@@ -303,6 +567,9 @@ ul.contacts-address {
   grid-template-columns: 1fr;
 }
 
+/*
+ * This is the map from maps.google.com
+ */
 iframe {
   position: absolute;
   top: 330px;
@@ -310,8 +577,7 @@ iframe {
   height: 500px;
 }
 
-
-form.contacts-form {
+.contacts-form {
   width: 90%;
   height: 400px;
   position: relative;
@@ -327,7 +593,6 @@ input.fullName, .email {
   padding-left: .2em;
 }
 
-
 /* ===================================================== */
 /* -------------- Section (Footer) --------------- */
 footer {
@@ -338,349 +603,239 @@ footer {
 }
 
 .address {
-align-items: center;
-margin-right: 2.5em;
+  align-items: center;
+  margin-right: 2.5em;
 }
 
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-
-/* ====================================================== */
-/* -------------- Rooms () --------------- */
-
-@media screen and(min-width: 700px){
-  .item1-content{
-    top: -55%;
-    left: 55%;
-    width: 35%;
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+/* =========================== Media Queries ================================ */
+@media only screen and (min-width: 700px){
+  .roomspage {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(50px, auto);
+    grid-template-areas:
+   "item1img item1content item1content"
+   "item2img item2content item2content"
+   "item3img item3content item3content" ;
   }
 }
 
-  @media screen and(min-width: 700px){
-    .item2-content {
-      top: -125%;
-      left: 5%;
-      width: 35%;
-    }
+
+/* ROOMS HEADER */
+
+
+.rooms-quote {
+  font-size: 14px;
+  font-style: italic;
+  text-align: center;
 }
 
-@media screen and(min-width: 700px){
-  .item3-content {
-    top: -55%;
-    left: 55%;
-    width: 35%;
+
+@media only screen and (min-width: 700px){
+  .rooms-quote {
+     margin-top: 120px;
   }
 }
 
-body.body-container {
-  width: 100%;
-  padding: 0;
-  margin: 0;
+
+svg.header-logo-rms {
+  margin-top: 30%;
+  margin-left: 30%;
 }
 
-div.room1-wrapper {
-  width: 100%;
-  height: 400px;
-  display: block;
-  padding: 0;
-  margin: 0;
-  position: relative;
-  top: 0%;
-  left: 0%;
+
+@media only screen and (min-width: 700px){
+  svg.header-logo-rms {
+    margin-top: 40px;
+  }
 }
 
-.item1, .item2, .item3, .item4 {
-  width: 65%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+
+.mark {
+  text-align: center;
 }
 
-.rooms-header {
-  background-image: url("images/michael-shannon-474807-unsplash.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  top: -26px;
-  left: 0px;
+
+.roomsbutt {
+  text-align: center;
+  opacity: 1;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 15px;
 }
+
+
+@media only screen and (min-width: 700px){
+  .roomsbutt {
+    visibility: hidden;
+  }
+}
+
+
+/* ROOMS IMAGES */
+
 
 .item1 {
   background-image: url("images/Sissinghurst-Bed-and-Breakfast-7.jpg");
-  position: relative;
   top: 20%;
-  left: 5%;
-  height: 500px;
-  opacity: 0;
-  transform: translateY(-20px);
-  transition: all 1s ease-in-out;
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.isShowing {
-  opacity: 1;
-  transform: translateY(0px);
+
+@media only screen and (min-width: 700px){
+  .item1 {
+    min-height: 50%;
+    /* background-size: contain; */
+    grid-area: item1img;
+    margin-right: 10px;
+  }
 }
 
-.item1-content {
-  background-color: white;
-  padding: 1em 1.5em 1em 1.5em;
-  line-height: 1.75em;
-  margin: 0;
-  z-index: 1;
-  position: relative;
-<<<<<<< HEAD
-  top: 40px;
-  left: 55%;
-  width: 35%;
-=======
->>>>>>> b970c46469c98a399806a33fa9ea8c4019bb3edf
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-}
 
 .item2 {
-  background-image: url("images/evergreen.jpg");
-  position: relative;
-  top: 20%;
-  left: 31%;
-  height: 500px;
-  opacity: 0;
-  transform: translateX(100px);
-  transition: all 1s ease-in-out;
+  background-image: url("images/room4.jpg");
+  top: 70%;
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.isShowing2 {
-  opacity: 1;
-  transform: translateX(0px);
+
+@media only screen and (min-width: 700px){
+  .item2 {
+    min-height: 70%;
+    /* background-size: contain; */
+    grid-area: item2img;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }
 
-.room2-wrapper {
-  width: 100%;
-  height: 400px;
-  display: block;
-  padding: 0;
-  margin: 0;
-  position: relative;
-  top: -40%;
-  left: 0%;
-}
-
-.item2-content {
-background-color: white;
-padding: 1em 1.5em 1em 1.5em;
-line-height: 1.75em;
-margin: 0;
-z-index: 1;
-position: relative;
-<<<<<<< HEAD
-top: 100px;
-left: 5%;
-width: 35%;
-=======
->>>>>>> b970c46469c98a399806a33fa9ea8c4019bb3edf
-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-}
 
 .item3 {
-  background-image: url("images/fireplace.jpg");
-  position: relative;
-  top: 20%;
-  left: 5%;
-  height: 500px;
-  opacity: 0;
-  transform: translateX(-20px);
-  transition: all 1s ease-in-out;
+  background-image: url("images/room5.jpg");
+  top: 90%;
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.isShowing2 {
-  opacity: 1;
-  transform: translateX(0px);
+
+@media only screen and (min-width: 700px){
+  .item3 {
+    min-height: 50%;
+    /* background-size: contain; */
+    grid-area: item3img;
+    margin-left: 10px;
+  }
 }
 
-.room3-wrapper {
-  width: 100%;
-  height: 400px;
-  display: block;
-  padding: 0;
-  margin: 0;
-  position: relative;
-  top: 0%;
-  left: 0%;
+
+/* ROOMS CONTENT */
+
+
+.item1-content {
+    text-align: center;
+    grid-area: item1content;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 13px;
+    font-style: italic;
 }
+
+
+.item1-content ul {
+    text-align: left;
+    font-size: 14px;
+    font-style: normal;
+    list-style-type: circle;
+}
+
+
+@media only screen and (min-width: 700px){
+  .item1-content h2 {
+      text-align: center;
+    }
+}
+
+
+@media only screen and (min-width: 700px){
+  .item1-content {
+    text-align: left;
+  }
+}
+
+
+.item2-content {
+    text-align: center;
+    grid-area: item2content;
+    margin: auto;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 13px;
+    font-style: italic;
+}
+
+
+.item2-content ul {
+    text-align: left;
+    font-size: 14px;
+    font-style: normal;
+    list-style-type: circle;
+}
+
+
+@media only screen and (min-width: 700px){
+  .item2-content h2 {
+      text-align: center;
+    }
+}
+
+
+@media only screen and (min-width: 700px){
+  .item2-content {
+    text-align: left;
+  }
+}
+
 
 .item3-content {
-  background-color: white;
-  padding: 1em 1.5em 1em 1.5em;
-  line-height: 1.75em;
-  margin: 0;
-  z-index: 1;
-  position: relative;
-<<<<<<< HEAD
-  bottom: 0px;
-  left: 55%;
-  width: 35%;
-=======
->>>>>>> b970c46469c98a399806a33fa9ea8c4019bb3edf
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-}
-
-.item4 {
-  background-image: url("images/Sissinghurst-Bed-and-Breakfast-7.jpg");
+    text-align: center;
+    grid-area: item3content;
+    margin: auto;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 13px;
+    font-style: italic;
 }
 
 
-body
-{
-  margin: 0;
-  padding: 0;
-  /* make it look decent enough */
-  background: clear; /* clear background */
-  font-family: "Avenir Next", "Avenir", sans-serif;
-}
-
-a {
-  text-decoration: none;
-  color: white;
-  transition: color 0.3s ease;
-}
-
-a:hover
-{
-  color: tomato;
-}
-
-#menuToggle
-{
-  display: block;
-  position: relative;
-  top: 50px;
-  left: 50px;
-
-  z-index: 1; /* Position in front */
-}
-
-#menuToggle input {
-  display: block;
-  width: 40px;
-  height: 32px;
-  position: absolute;
-  top: -7px;
-  left: -5px;
-
-  cursor: pointer;
-
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
-}
-
-/*
- * Just a quick hamburger
-*/
-#menuToggle span
-{
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
-  position: relative;
-
-  background: white;
-  border-radius: 3px;
-
-  z-index: 1;
-
-  transform-origin: 4px 0px;
-
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
-}
-
-#menuToggle span:first-child {
-  transform-origin: 0% 0%;
-}
-
-#menuToggle span:nth-last-child(2)
-{
-  transform-origin: 0% 100%;
-}
-
-/*
- * Transform all the slices of hamburger
- * into a crossmark.
- */
-#menuToggle input:checked ~ span
-{
-  opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
-  background: white;
-}
-
-/*
- * But let's hide the middle one.
- */
-#menuToggle input:checked ~ span:nth-last-child(3)
-{
-  opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
-}
-
-/*
- * Ohyeah and the last one should go the other direction
- */
-#menuToggle input:checked ~ span:nth-last-child(2)
-{
-  transform: rotate(-45deg) translate(0, -1px);
-}
-
-/*
- * Make this absolute positioned
- * at the top left of the screen
- */
-#menu
-{
-  position: absolute;
-  width: 200px;
-  height: 489px;
-  margin: -100px 0 0 -50px;
-  padding: 50px;
-  padding-top: 125px;
-
-  background: rgba(47,79,79, .5);
-  list-style-type: none;
-  -webkit-font-smoothing: antialiased;
-  /* to stop flickering of text in safari */
-
-  transform-origin: 0% 0%;
-  transform: translate(-100%, 0);
-
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-}
-
-#menu li
-{
-  padding: 10px 0;
-  font-size: 22px;
-}
-
-/*
- * And let's slide it in from the left
- */
-#menuToggle input:checked ~ ul
-{
-  transform: none;
+.item3-content ul {
+    text-align: left;
+    font-size: 14px;
+    font-style: normal;
+    list-style-type: circle;
 }
 
 
-#social {
-  position: absolute;
-  top: 85%;
-  left: 0px;
-  display: flex;
-  flex-direction: row;
+@media only screen and (min-width: 700px){
+  .item3-content h2 {
+      text-align: center;
+    }
 }
 
-.spacing {
-  margin: 0 0 0 1em;
+
+@media only screen and (min-width: 700px){
+  .item3-content {
+    text-align: left;
+  }
 }
+
+
+/* PUT FOOTER HERE */
