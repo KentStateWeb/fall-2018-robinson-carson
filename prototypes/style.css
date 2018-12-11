@@ -591,13 +591,11 @@ input.fullName, .email {
 }
 
 /* ===================================================== */
-<<<<<<< HEAD
 @media only screen and (min-width: 700px){
   .res-wrapper {
     position: absolute;
     display: flex;
   }
-=======
 /* -------------- Section (Footer) --------------- */
 footer {
   text-align: center;
@@ -609,7 +607,6 @@ footer {
 .address {
   align-items: center;
   margin-right: 2.5em;
->>>>>>> 387124cbc04bfa896b5722764a606bd4ee1a5444
 }
 
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
@@ -856,8 +853,6 @@ svg.header-logo-rms {
 }
 
 
-
-<<<<<<< HEAD
 .footer-distributed{
 	background-color: #7B5136;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
@@ -1004,7 +999,8 @@ svg.header-logo-rms {
 	.footer-distributed .footer-center i{
 		margin-left: 0;
 	}
-=======
+
+
 /* PUT FOOTER HERE */
 .footer-distributed{
         background-color: #7B5136;
@@ -1181,7 +1177,5 @@ svg.header-logo-rms {
         .footer-distributed .footer-center i{
                 margin-left: 0;
         }
-
->>>>>>> 387124cbc04bfa896b5722764a606bd4ee1a5444
 
 }
