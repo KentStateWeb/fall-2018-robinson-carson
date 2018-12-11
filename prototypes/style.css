@@ -591,32 +591,28 @@ input.fullName, .email {
 }
 
 /* ===================================================== */
-<<<<<<< HEAD
 @media only screen and (min-width: 700px){
   .res-wrapper {
     position: absolute;
     display: flex;
   }
-=======
-/* -------------- Section (Footer) --------------- */
-footer {
-  text-align: center;
-  position: relative;
-  top: 150px;
-  color: black;
-}
-
-.address {
-  align-items: center;
-  margin-right: 2.5em;
->>>>>>> 387124cbc04bfa896b5722764a606bd4ee1a5444
 }
 
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
 
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
 /* =========================== Media Queries ================================ */
-
+@media only screen and (min-width: 700px){
+  .roomspage {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(50px, auto);
+    grid-template-areas:
+   "item1img item1content item1content"
+   "item2img item2content item2content"
+   "item3img item3content item3content" ;
+  }
+}
 
 
 /* ROOMS HEADER */
@@ -686,9 +682,9 @@ svg.header-logo-rms {
 @media only screen and (min-width: 700px){
   .item1 {
     min-height: 50%;
-    background-size: contain;
+    /* background-size: contain; */
+    grid-area: item1img;
     margin-right: 10px;
-    background-position: center;
   }
 }
 
@@ -705,8 +701,7 @@ svg.header-logo-rms {
 @media only screen and (min-width: 700px){
   .item2 {
     min-height: 70%;
-    background-size: contain;
-    background-position: center;
+    /* background-size: contain; */
     grid-area: item2img;
     margin-left: 10px;
     margin-right: 10px;
@@ -726,8 +721,7 @@ svg.header-logo-rms {
 @media only screen and (min-width: 700px){
   .item3 {
     min-height: 50%;
-    background-size: contain;
-    background-position: center;
+    /* background-size: contain; */
     grid-area: item3img;
     margin-left: 10px;
   }
@@ -739,6 +733,7 @@ svg.header-logo-rms {
 
 .item1-content {
     text-align: center;
+    grid-area: item1content;
     margin-left: 5px;
     margin-right: 5px;
     font-size: 13px;
@@ -767,17 +762,10 @@ svg.header-logo-rms {
   }
 }
 
-@media only screen and (min-width: 700px){
-  .item1-content p {
-    text-align: center;
-    margin-left: 3em;
-    margin-right: 3em;
-  }
-}
-
 
 .item2-content {
     text-align: center;
+    grid-area: item2content;
     margin: auto;
     margin-left: 5px;
     margin-right: 5px;
@@ -807,17 +795,10 @@ svg.header-logo-rms {
   }
 }
 
-@media only screen and (min-width: 700px){
-  .item2-content p {
-    text-align: center;
-    margin-left: 3em;
-    margin-right: 3em;
-  }
-}
-
 
 .item3-content {
     text-align: center;
+    grid-area: item3content;
     margin: auto;
     margin-left: 5px;
     margin-right: 5px;
@@ -847,17 +828,7 @@ svg.header-logo-rms {
   }
 }
 
-@media only screen and (min-width: 700px){
-  .item3-content p {
-    text-align: center;
-    margin-left: 3em;
-    margin-right: 3em;
-  }
-}
 
-
-
-<<<<<<< HEAD
 .footer-distributed{
 	background-color: #7B5136;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
@@ -1004,184 +975,5 @@ svg.header-logo-rms {
 	.footer-distributed .footer-center i{
 		margin-left: 0;
 	}
-=======
-/* PUT FOOTER HERE */
-.footer-distributed{
-        background-color: #7B5136;
-        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
-        box-sizing: border-box;
-        width: 100%;
-        text-align: left;
-        font: bold 16px sans-serif;
-
-
-        padding: 55px 50px;
-        margin-top: 80px;
-
-
-}
-
-
-.footer-distributed .footer-left,
-.footer-distributed .footer-center,
-.footer-distributed .footer-right{
-        display: inline-block;
-        vertical-align: top;
-}
-
-
-/* Footer left */
-
-
-.footer-distributed .footer-left{
-        width: 40%;
-}
-
-
-/* logo */
-
-
-.footer-distributed h3{
-        color:  #ffffff;
-        margin: 0;
-        font-size: 20px;
-}
-
-
-.footer-distributed h3 span{
-        color:  #8f9296;
-}
-
-
-/* Footer links */
-
-
-.footer-distributed .footer-links{
-        color:  #ffffff;
-        margin: 20px 0 12px;
-        padding: 0;
-}
-
-
-.footer-distributed .footer-links a{
-        display:inline-block;
-        line-height: 1.8;
-        text-decoration: none;
-        color:  inherit;
-}
-
-
-.footer-distributed .footer-company-name{
-        color:  #8f9296;
-        font-size: 14px;
-        font-weight: normal;
-        margin: 0;
-}
-
-
-/* Footer Center */
-
-
-.footer-distributed .footer-center{
-        width: 35%;
-}
-
-
-.footer-distributed .footer-center i{
-        background-color:  #33383b;
-        color: #ffffff;
-        font-size: 25px;
-        width: 38px;
-        height: 38px;
-        border-radius: 50%;
-        text-align: center;
-        line-height: 42px;
-        margin: 10px 15px;
-        vertical-align: middle;
-}
-
-
-.footer-distributed .footer-center i.fa-envelope{
-        font-size: 17px;
-        line-height: 38px;
-}
-
-
-.footer-distributed .footer-center p{
-        display: inline-block;
-        color: #ffffff;
-        vertical-align: middle;
-        margin:0;
-}
-
-
-.footer-distributed .footer-center p span{
-        display:block;
-        font-weight: normal;
-        font-size:14px;
-        line-height:2;
-}
-
-
-.footer-distributed .footer-center p a{
-        color:  #5383d3;
-        text-decoration: none;;
-}
-
-
-
-
-/* Footer Right */
-
-
-.footer-distributed .footer-right{
-        width: 20%;
-}
-
-
-.footer-distributed .footer-company-about{
-        line-height: 20px;
-        color:  #92999f;
-        font-size: 13px;
-        font-weight: normal;
-        margin: 0;
-}
-
-
-.footer-distributed .footer-company-about span{
-        display: block;
-        color:  #ffffff;
-        font-size: 14px;
-        font-weight: bold;
-        margin-bottom: 20px;
-}
-
-
-/* media queries */
-
-
-@media (max-width: 880px) {
-
-
-        .footer-distributed{
-                font: bold 14px sans-serif;
-        }
-
-
-        .footer-distributed .footer-left,
-        .footer-distributed .footer-center,
-        .footer-distributed .footer-right{
-                display: block;
-                width: 100%;
-                margin-bottom: 40px;
-                text-align: center;
-        }
-
-
-        .footer-distributed .footer-center i{
-                margin-left: 0;
-        }
-
->>>>>>> 387124cbc04bfa896b5722764a606bd4ee1a5444
 
 }
